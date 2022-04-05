@@ -20,3 +20,6 @@ export const images = [
     {id:2,name:'url2'},
     {id:3,name:'url3'}
 ]
+
+
+export const notes =  ['note 1', 'note 2', 'note 3']

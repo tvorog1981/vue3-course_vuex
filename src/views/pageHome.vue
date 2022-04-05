@@ -1,5 +1,6 @@
 <template>
   <div>
+  
     <Form @onSubmit="Submit"></Form>
     <List :items="notes" @removeItem="handlerItem"></List>
   </div>
@@ -9,10 +10,14 @@
 <script>
 import Form from '@/components/Notes/Form.vue'
 import List from '@/components/Notes/List.vue'
+
 export default{
 components:{
   Form:Form,
   List:List
+},
+created(){
+  console.log(this.notes)
 },
 methods:{
   Submit(event){
@@ -29,6 +34,7 @@ methods:{
  data(){
     return{
       notes: ['note 1', 'note 2', 'note 3']
+
     }
   }
 
