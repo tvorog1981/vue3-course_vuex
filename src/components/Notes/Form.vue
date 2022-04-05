@@ -3,7 +3,7 @@
   
     <form @submit.prevent="onSubmit" class="note-form">
         <textarea type="text" required v-model="value"  placeholder="Type ur note"/>
-     <TheTag :tagsItems="tagsList" />
+     <TheTag :tagsItems="tagsList" @handlerTag="onHandelTag" ></TheTag>
         <button type="submit" class="btn btnPrimary btn-size">Add new note</button>
        
     </form>
@@ -27,6 +27,9 @@ export default{
          this.$emit('onSubmit', this.value)
          this.value = ""
         
+     },
+     onHandelTag(item){
+         console.log(item)
      }
  },
  components:{

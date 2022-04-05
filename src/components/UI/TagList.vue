@@ -1,7 +1,7 @@
 <template>
 <div class="tags">
-<div v-for="(link, index) in tagsItems" :key="index">
-    <router-link class="link__tag" :to="link">{{link}}</router-link>
+<div v-for="link in tagsItems" :key="link">
+    <p class="btn btnPrimary" v-on:click="$emit('handlerTag', link)">{{link}}</p>
  
     </div>  
 </div>
@@ -19,6 +19,9 @@ export default{
             type:Array,
             default:[]
         }
+    },
+    methods:{
+        
     }
 
 }
